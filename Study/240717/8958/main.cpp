@@ -28,7 +28,7 @@ int main(void){
                 combo = 1;
             }
         }
-        printf("%d\n", score);
+        cout << score << '\n';
     }
 
     return 0;
