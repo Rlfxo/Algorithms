@@ -4,6 +4,14 @@ uint16_t : 0 ~ 65,535
 uint32_t : 0 ~ 4,294,967,295
 uint64_t : 0 ~ 18,446,744,073,709,551,615
 
+- 입출력
+* 라인 입력
+string line;
+getline(cin, line);
+for (char c : line){
+    cout << c << endl;
+}
+
 \n : 줄바꿈
 
 %o : 8진수
@@ -41,22 +49,6 @@ v.insert(x,y)   // x번째 위치에 y 삽입 (interator 반환)
 v.erase(iter)   // iter가 가리키는 원소를 제거
                 // size만 줄어들고 capacity는 남음
 v.empty()       // size가 0이면 true 반환
-
----
-
-- 문자열 입출력
-1152 : 글자 수 공백 값
-11654 : 아스키 값
-2588 : 정수 입력
-11382 : 정수 범위
-
-- 조건문 반복문
-10871 : for 문
-2753 : if 문
-
-- 배열 (Vector)
-
-
 
 ---
 
