@@ -74,6 +74,32 @@ for (iter = v.begin(); iter != v.end(); iter++){
 - v.erase(iter)   // iter가 가리키는 원소를 제거, size만 줄어들고 capacity는 남음
 - v.empty()       // size가 0이면 true 반환
 
+### STL Algorithm
+#### 정렬
+- sort : 일반 정렬
+``` c
+sort(v.begin(), v.end()); // 순차정렬
+
+struct int_compare {
+    bool operator()(const int&a, const int&b) const {return a > b;}
+}; // int 전용
+sort(v.begin(), v.end(), int_compare()); // 역순정렬
+
+template <typename T>
+struct greater_compare {
+    bool operator()(const T& a, const T& b) const { return a > b; }
+}; // 타입 공용
+sort(v.begin(), v.end(), greater_compare()); // 역순정렬
+
+#include <functional>
+sort(vec.begin(), vec.end(), less<int>()); // 순차정렬
+sort(vec.begin(), vec.end(), greater<int>()); // 역순정렬
+
+```
+- stable_sort : 크기가 같은 원소의 순서 보존
+- partial_sort : 일부분만 정렬
+
+
 ---
 ### 부적 
 ``` c
