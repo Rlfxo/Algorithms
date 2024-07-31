@@ -18,9 +18,10 @@ int main(void){
     for(i = 0; i < len; i++){
         if(word[i] != word[len - i - 1]){
             pass = false;
-            return 0;
+            break;
         }
     }
+    cout << (pass ? 1 : 0);
     
 
     return 0;
