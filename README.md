@@ -61,6 +61,7 @@ for (iter = v.begin(); iter != v.end(); iter++){
 
 #### Vector Container
 - 선언 : vector<data type> v
+- +2차원 : vector<vector<int>> v(m); // m길이의 vector *추가 study 필요
 - v.at(idx);      // idx 참조 (범위 점검 o = 안전)
 - v[idx];         // idx 참조 (범위 점검 x = 빠름)
 - v.front()       // 처음 원소
