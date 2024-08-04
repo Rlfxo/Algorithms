@@ -37,6 +37,9 @@ getline(cin, line);
 for (char c : line){
     cout << c << endl;
 }
+
+// 입력버퍼의 내용제거 
+cin.ignore();
 ```
 - \n : 줄바꿈
 - %o : 8진수
@@ -63,6 +66,14 @@ for (iter = v.begin(); iter != v.end(); iter++){
 - 선언 : vector<data type> v
 - +2차원 : vector<vector<int>> v(m); // m길이의 vector *추가 study 필요
 - v.at(idx);      // idx 참조 (범위 점검 o = 안전)
+```
+    try {
+        cout << v.at(idx);
+    }
+    catch (out_of_range& e){
+        continue;
+    }
+```
 - v[idx];         // idx 참조 (범위 점검 x = 빠름)
 - v.front()       // 처음 원소
 - v.back()        // 마지막 원소
