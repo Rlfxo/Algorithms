@@ -22,12 +22,18 @@ https://modoocode.com/225
 └── ETC...
 ```
 
+### 시간복잡도(O)
+- O(1) 0차 : i = n / 2; 
+- O(n) 1차 : for i <- 1 to n
+- O(n^2) 2차 : for i <- 1 to n {for j <- 1 to n}
+- O(n^3) 3ck : for i <- 1 to n {for j <- 1 to n {for k <- 1 to n}}
+
 
 ### 정수범위
-- uint8_t : 0 ~ 255
-- uint16_t : 0 ~ 65,535
-- uint32_t : 0 ~ 4,294,967,295
-- uint64_t : 0 ~ 18,446,744,073,709,551,615
+- uint8_t  : 0 ~ 255                        (char)
+- uint16_t : 0 ~ 65,535                     (short)
+- uint32_t : 0 ~ 4,294,967,295              (long) **int**
+- uint64_t : 0 ~ 18,446,744,073,709,551,615 (long long) **pointer**
 
 ### 입출력
 ##### [라인 입력]
