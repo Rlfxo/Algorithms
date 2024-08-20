@@ -93,11 +93,20 @@ for (iter = v.begin(); iter != v.end(); iter++){
 - v.empty()       // size가 0이면 true 반환
 
 ### STL Algorithm
+#### 압축
+- unique : 중복 정리
+``` c
+unique(v.begin(), v.end()); // 1 2 2 3 4 -> 1 2 3 4 2
+//원본유지 영역의 첫 주소 값을 반환
+v.erase(unique(v.begin(), v.end()), v.end()); // 지우기
+```
+
 #### 정렬
 - sort : 일반 정렬
 ``` c
 sort(v.begin(), v.end()); // 순차정렬
 
+// Custom
 struct int_compare {
     bool operator()(const int&a, const int&b) const {return a > b;}
 }; // int 전용
@@ -109,6 +118,7 @@ struct greater_compare {
 }; // 타입 공용
 sort(v.begin(), v.end(), greater_compare()); // 역순정렬
 
+// Osusume
 #include <functional>
 sort(vec.begin(), vec.end(), less<int>()); // 순차정렬
 sort(vec.begin(), vec.end(), greater<int>()); // 역순정렬
