@@ -92,6 +92,13 @@ for (iter = v.begin(); iter != v.end(); iter++){
 - v.erase(iter)   // iter가 가리키는 원소를 제거, size만 줄어들고 capacity는 남음
 - v.empty()       // size가 0이면 true 반환
 
+### Map
+#### Map Container
+- 선언 : map<key, value> m;
+- 삽입 : m.insert({key, value});
+- 삭제 : m.erase(key); m.clear();
+- *정렬 : map<key, value, greater<type>> m;
+
 ### STL Algorithm
 #### 압축
 - unique : 중복 정리
