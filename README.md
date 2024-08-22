@@ -102,6 +102,38 @@ for (iter = v.begin(); iter != v.end(); iter++){
 - 삭제 : m.erase(key); m.clear();
 - *정렬 : map<key, value, greater<type>> m;
 
+#### Unorded Map
+- 선언 : unordered_map<key, value> um;
+
+##### Search
+- m[key]; // key로 Value찾기
+- m.find(key); // key로 iterator찾기
+``` c
+// Tip 
+map<string, int> m;
+string mapping[100001];
+
+for(int i = 0; i < 100001; i++){
+    cin >> input;
+
+    map.insert({input, i});
+    mapping[i] = input;
+}
+/*
+입력시
+A:0    ----    arr[0] = A
+C:1    ----    arr[1] = C
+D:2    ----    arr[2] = D   
+B:3    ----    arr[3] = B
+*/
+
+//Key로 찾기
+cout << m[key];
+//Value로 찾기
+cout << mapping[value];
+
+```
+
 ### STL Algorithm
 #### 압축
 - unique : 중복 정리
@@ -144,7 +176,7 @@ sort(vec.begin(), vec.end(), greater<int>()); // 역순정렬
 ios::sync_with_stdio(false); cin.tie(NULL);
 cin.exceptions(ios::badbit | ios::failbit);
 ```
-#### cin cout 속도 향상
+#### cin cout 속도 향상 (endl 사용 금지)
 ``` c
 cout << '\n';
 ```
