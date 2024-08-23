@@ -16,10 +16,13 @@ https://modoocode.com/225
 │   └── Vector Container
 │
 ├── Map
-│   └── Map Container
+│   ├── Map Container
+│   └── Unordered Map
 │
 ├── Algorithm
-│   ├─- 
+│   ├── 압축
+│   ├── 정렬
+│   ├── 탐색
 │   └── 
 │
 └── ETC...
@@ -105,7 +108,7 @@ for (iter = v.begin(); iter != v.end(); iter++){
 #### Unorded Map
 - 선언 : unordered_map<key, value> um;
 
-##### Search
+##### Map Search
 - m[key]; // key로 Value찾기
 - m.find(key); // key로 iterator찾기
 ``` c
@@ -169,6 +172,15 @@ sort(vec.begin(), vec.end(), greater<int>()); // 역순정렬
 - stable_sort : 크기가 같은 원소의 순서 보존
 - partial_sort : 일부분만 정렬
 
+#### 탐색
+- binary_search : 이진탐색
+- lower_bound : 원소의 첫 위치
+- upper_bound : 원소의 마지막 위치
+
+``` c
+upper_bound(x.begin(), x.end(), target);
+upper_bound(arr, arr + num, target);
+```
 
 ---
 ### 부적 
