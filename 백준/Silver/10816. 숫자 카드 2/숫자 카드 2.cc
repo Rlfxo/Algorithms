@@ -1,13 +1,13 @@
 #include <iostream>
 #include <stdint.h>
-#include <map>
+#include <algorithm>
 
 using namespace std;
 
 int32_t N, M, i;
 int64_t card;
+int64_t arr[500002];
 
-map<int64_t, int32_t> m;
 
 int main(void)
 {  
@@ -20,14 +20,16 @@ int main(void)
     for(i = 0; i < N; i++)
     {
         cin >> card;
-        m[card]++;
+        arr[i] = card;
     }
+
+    sort(arr, arr + N);
 
     cin >> M;
     for(i = 0; i < M; i++)
     {
         cin >> card;
-        cout << m[card] << " ";
+        cout << upper_bound(arr, arr + N, card) - lower_bound(arr, arr + N, card) << '\n';
     }
 
     return 0;
