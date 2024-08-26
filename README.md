@@ -10,6 +10,8 @@ https://modoocode.com/225
 │   └─- 주소
 │
 ├── 입출력
+│ 
+├── 문자열
 │
 ├── Vector
 │   ├── Vector Iterator
@@ -60,6 +62,14 @@ cin.ignore();
 - %u : unsigned 10진수
 - %zu : size
 - %p: 포인터의 주소
+
+### 문자열
+STD : #include <string>
+- 선언 : string s = "Hello, World!";
+- 지우기 : s.erase(0, 5); // 0번째부터 5개 지우기
+- 특정 지우기 : s.erase(s.find("xxx"), 3); // "xxx" 지우기
+- 삽입 : s.insert(0, "Hi"); // 0번째 위치에 "Hi" 삽입
+- 추출 : s.substr(0, 5); // 0번째부터 5개 문자 추출
 
 ### Vector
 #### Vector Interator
