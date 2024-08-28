@@ -27,8 +27,17 @@ https://modoocode.com/225
 │   ├── 탐색
 │   └── 
 │
+├── 자료구조
+│   ├── 스택
+│   ├── 큐
+│   ├── 데크
+│   └── 
+│
+│
 └── ETC...
 ```
+
+---
 
 ### 시간복잡도(O)
 - O(1) 0차 : i = n / 2; 
@@ -71,6 +80,7 @@ STD : #include <string>
 - 삽입 : s.insert(0, "Hi"); // 0번째 위치에 "Hi" 삽입
 - 추출 : s.substr(0, 5); // 0번째부터 5개 문자 추출
 
+---
 ### Vector
 #### Vector Interator
 - 선언 : vector<data type>::iterator iter
@@ -146,6 +156,7 @@ cout << m[key];
 cout << mapping[value];
 
 ```
+---
 
 ### STL Algorithm
 #### 압축
@@ -191,6 +202,32 @@ sort(vec.begin(), vec.end(), greater<int>()); // 역순정렬
 upper_bound(x.begin(), x.end(), target);
 upper_bound(arr, arr + num, target);
 ```
+---
+### 자료구조
+#### 스택
+- 선언 : stack<data type> s;
+- 삽입 : s.push(data);
+- 삭제 : s.pop();
+- 접근 : s.top();
+- 비었는지 : s.empty();
+- 크기 : s.size();
+
+#### 큐
+- 선언 : queue<data type> q;
+- 삽입 : q.push(data);
+- 삭제 : q.pop();
+- 접근 : q.front();
+- 비었는지 : q.empty();
+- 크기 : q.size();
+
+#### 데크
+- 선언 : deque<data type> dq;
+- 삽입 : dq.push_back(data); dq.push_front(data);
+- 삭제 : dq.pop_back(); dq.pop_front();
+- 접근 : dq.front(); dq.back();
+- 비었는지 : dq.empty();
+- 크기 : dq.size();
+
 
 ---
 ### 부적 
