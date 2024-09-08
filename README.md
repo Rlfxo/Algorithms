@@ -228,6 +228,12 @@ upper_bound(arr, arr + num, target);
 - 비었는지 : dq.empty();
 - 크기 : dq.size();
 
+#### List
+- 선언 : list<data type> l;
+- 삽입 : push, l.insert(itr, k);
+- 삭제 : pop, l.erase(itr);
+- 정렬 : l.reverse(); l.sort(); (오름차순)
+- 조건 : l.remove(k); l.remove_if(Predicate);
 
 ---
 ### 부적 
