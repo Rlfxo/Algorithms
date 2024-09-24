@@ -33,6 +33,9 @@ https://modoocode.com/225
 │   ├── 데크
 │   └── 
 │
+├── 정리
+│   ├── 이항 계수(Binomial Coefficient)
+│   └── 
 │
 └── ETC...
 ```
@@ -228,6 +231,34 @@ upper_bound(arr, arr + num, target);
 - 비었는지 : dq.empty();
 - 크기 : dq.size();
 
+
+---
+### 정리
+#### 이항 계수(Binomial Coefficient)
+- 분할정복 O(2^n)
+``` c
+int binom(int n, int k){
+    if (k == 0 || k == n) return 1;
+    return binom(n - 1, k - 1) + binom(n - 1, k);
+}
+```
+- 동적계획법(메모이제이션) O(NK) *N, K 값이 10,000 이하일 때 가능
+    - 메모이제이션 : 이미 계산한 값을 저장하여 재사용하는 기법
+``` c
+const MOD = 1e9 + 7;
+int DP[1001][1001];
+
+int bino_dp(int n, int k){
+    for (int i = 0; i <= 1000; i++){
+        for (int ii = 0; ii <= 1000; ii++){
+            if (i == ii || ii == 0) DP[i][ii] = 1;
+            else DP[i][ii] = (DP[i - 1][ii - 1] + DP[i - 1][ii]) % MOD;
+        }
+    }
+    return DP[n][k];
+}
+```
+- 페르마의 소정리 O(K)
 
 ---
 ### 부적 
