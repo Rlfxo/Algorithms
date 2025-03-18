@@ -1,15 +1,42 @@
 #include <iostream>
 #include <fstream>
+#include <stack>
 
 using namespace std;
 
 int N;
-int L[1000001];
+stack<int> S;
+stack<int> A;
 
-void solve() {
+void solve()
+{
+    stack<int> s = S;
+    s.pop();
+    int target = S.top();
+
+    while (1)
+    {
+        if (s.empty())
+        {
+            cout << 0 << " ";
+            return;
+        }
+
+        if (target < s.top())
+        {
+            A.push(s.size());
+            S.pop();
+            return;
+        }
+        else
+        {
+            s.pop();
+        }
+    }
 }
 
-int main() {
+int main()
+{
     fstream input;
     input.open("input.txt");
 
@@ -18,17 +45,22 @@ int main() {
     cout.tie(NULL);
 
     input >> N;
-    cout << "N: " << N << endl;
-    for (int i = 0; i < N; i++) {
-        input >> L[i];
+    for (int i = 0; i < N; i++)
+    {
+        int n;
+        input >> n;
+        S.push(n);
     }
-    cout << "L: ";
-    for (int i = 0; i < N; i++) {
-        cout << L[i] << " ";
+    for (int i = 0; i < N; i++)
+    {
+        solve();
     }
-    cout << endl;
 
-    solve();
+    while (!A.empty())
+    {
+        cout << A.top() << " ";
+        A.pop();
+    }
 
     return 0;
 }
